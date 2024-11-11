@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+
+/*----------------------- Cabecalho ----------------------- */
+
+.cabecalho{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cabecalho__menu{
+    display: flex;
+    position: relative;
+    margin: 49px 15% 24px 0px;
+    gap: 24px;
+    z-index: 10;
+}
+
+
+#linha{
+    width: 0px;
+    border: 1px  solid #ffffff;
+    height: 100%;
+}
+
+#conectar{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    align-items: center;
+    padding: center;
+}
+
+.cabecalho__menu__link{
+    font-family: 'Epilogue', sans-serif;
+    align-items: center;
+    padding: 12px 24px 12px 24px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: #ffffff;
+    text-decoration: none;
+    z-index: 10;
+}
+
+
+/*----------------------- Main ----------------------- */
+
+.principal_bg{
+    z-index: -10;
+    background: linear-gradient(180deg, #0A2770 60%, #3468E9 100%);
+    position: relative;
+}
+
+.principal_bg_img{
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+}
+
+.principal {
+    margin: 0px 15% -13% 15%;
+    color: white;  
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: row; /* Alterado para linha, para colocar a animação ao lado do conteúdo */
+    justify-content: space-between;
+    font-size: 20px;
+    margin-top: 127px;
+}
+
+.principal__conteudo__imagem {
+    margin-right: 20px; /* Espaçamento entre a imagem e a animação */
+    margin-bottom: 26px;
+}
+
+.principal_animation {
+    padding: 0px;
+    display: flex;
+    justify-content: flex-end; /* Alinha a animação à direita */
+    width: 100%; /* Garante que o elemento ocupe toda a largura disponível */
+    align-items: center; /* Alinha o conteúdo verticalmente no centro */
+}
+
+/*----------------------- Secundaria ----------------------- */
+
+.secundario__bg{
+        position: absolute;
+        z-index: 1;
+    }
+    
+.secundario{
+    color: #3468E9;
+    background-color: white; 
+    z-index: -1;
+    padding: 5% 15% 5% 15%;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    font-size: 20px;
+    margin-top: 127px;
+}
+
+.secundario__conteudo{
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px; 
+}
+
+.secundario__conteudo__imagem{
+    z-index: 3;
+}
+
+.secundario__conteudo__paragrafo{
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 50px;
+}
+
+/*----------------------- Terceiro ----------------------- */
+
+.terceiro{
+    color: white;
+    background-color: #0A3170;
+    z-index: -1;
+    padding: 0% 15% 40% 15%;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column; 
+    font-size: 20px;
+}
+
+.terceiro__conteudo__titulo{
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'epilogue' sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    margin: 128px 0px 75px 0px;
+}
+
+.terceiro__conteudo__titulo span{
+    font-weight: 700;
+}
+
+.terceiro__conteudo__lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.terceiro__conteudo__lista__card{
+    display: flex;
+    background-color: #D9D9D9;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 0px 50px 0px;
+    height: 178px;
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.terceiro__conteudo__lista__card p{
+    margin: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.terceiro__conteudo__lista__card h5{
+    margin: 20px;
+    
+}
+
+.terceiro__conteudo__lista__card__botao {
+    position: relative;
+    padding: 0px 25% 0px 20px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3468E9;
+    border-radius: 0px 30px 30px 0px;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+}
+
+@keyframes lado {
+    from {
+        opacity: 100%;
+        padding: 0px 20% 0px 20px; /* Ajuste o padding para começar visível */
+    }
+
+    to {
+        opacity: 0%;   /* Fica invisível */
+        padding: 0px 0% 0px 0%; /* O padding se reduz a 0% */
+    }
+}
+
+/* Aplica a animação quando o mouse passar sobre o card */
+.terceiro__conteudo__lista__card:hover #botao {
+    animation: lado 1s ease-in-out forwards; /* A animação dura 1 segundo, com suavização */
+}
+
+#card-paragrafo {
+    font-family: 'Montserrat', sans-serif;
+    color: #0A2770;
+    padding: 10px -10px -10px 15px; 
+}
+
+
+.terceiro__conteudo__lista__card__botao_2 {
+    position: relative;
+    padding: 0px calc(30% - 13%) 0px 20px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3468E9;
+    border-radius: 0px 30px 30px 0px;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 11% 100%);
+}
+
+.terceiro__conteudo__lista__card__botao_3 {
+    position: relative;
+    padding: 0px calc(22% - 13%) 0px 20px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3468E9;
+    border-radius: 0px 30px 30px 0px;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%);
+}
+
+.terceiro__conteudo__lista__card__botao__titulo{
+    color: white;
+    width: 400px;
+    font-size: 35px;
+    font-family: 'epilogue' sans-serif;
+    font-style: bold;
+    font-weight: 600;   
+    margin-left: 50px;
+}
+
+#botao {
+    color: white;
+    width: 400px;
+    font-size: 35px;
+    font-family: 'epilogue' sans-serif;
+    font-style: bold;
+    font-weight: 600;   
+}
+
+
+
